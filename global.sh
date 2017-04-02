@@ -16,6 +16,7 @@ export CL_RST="\033[0m";
 
 # git root Ordner
 export BRANCH_GIT=${HOME}/develop/branch.git
+export WORK_BASE=${HOME}/works
 # end
 
 # software root Ordner
@@ -24,12 +25,6 @@ export SELFLIB=${MSHELL}/libs
 # end
 
 # ANDROID Einstellungen
-## Java Einstellungen
-export JRE_HOME=${JAVA_HOME}/jre
-export CLASSPATH=.
-## // :$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
-## end
-
 ## android Ordner
 export ANDROID_DIR=${HOME}/android
 ## end
@@ -66,5 +61,11 @@ export GOROOT=${MSOFT}/go
 
 ## matlab @2016.01.30
 export MATLAB_HOME=/usr/local/matlab/R2015b
+## end
+
+## zephyr config
+export ZEPHYR_BASE=${WORK_BASE}/uni/company/eqplay/platform/zephyr
+export ZEPHYR_GCC_VARIANT=zephyr
+export ZEPHYR_SDK_INSTALL_DIR=${HOME}/zephyr/sdk
 ## end
 # end

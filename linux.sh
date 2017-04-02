@@ -2,9 +2,14 @@
 ## setting for pycharm cannot use ibus
 export IBUS_ENABLE_SYNC_MODE=1
 
+## Java Einstellungen
+export JRE_HOME=${JAVA_HOME}/jre
+export CLASSPATH=.
+## // :$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
 #export JAVA_HOME=/usr/lib/jvm/java-6-sun
 export JAVA_HOME=/usr/lib/jvm/java-1.7.0-openjdk-amd64
 #export JAVA_HOME=/usr/lib/jvm/openjdk-7-amd64
+## end
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 case `grep -i name /proc/$$/status | awk '{print $2}'` in

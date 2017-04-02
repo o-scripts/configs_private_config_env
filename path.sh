@@ -30,10 +30,15 @@ export PATH=${MATLAB_HOME}/bin:${PATH}
 # homebrew software envalue
 case ${ARCH} in
 	'Darwin')
-		export PATH=${MSOFT}/homebrew/bin:${PATH}
-		export PATH=${MSOFT}/homebrew/sbin:${PATH}
+		export PATH=${LOCAL_WORKS_DIR}/tool-kit/publics/homebrew/bin:${PATH}
+		export PATH=${LOCAL_WORKS_DIR}/tool-kit/publics/homebrew/sbin:${PATH}
+        export PATH=${LOCAL_WORKS_DIR}/tool-kit/publics/homebrew/opt/apr/bin:${PATH}
+        export PATH=${LOCAL_WORKS_DIR}/tool-kit/publics/homebrew/opt/openssl/bin:$PATH
 		## for macports command path
 		export PATH=/opt/local/bin:$PATH
+		export PATH=${NDK_HOME}:$PATH
+        ## for works/bin self define bin
+        export PATH=${LOCAL_WORKS_DIR}/bin:${PATH}
 		;;
 	'Linux')
 		export PATH=${MSOFT}/pycharm-current/bin:${PATH}
