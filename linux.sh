@@ -17,8 +17,7 @@ case `grep -i name /proc/$$/status | awk '{print $2}'` in
         ## ignore 'space + command'
         export HISTCONTROL=ignorespace
         ## ROS config
-        echo source /opt/ros/kinetic/setup.bash
-        source /opt/ros/kinetic/setup.bash
+        m.import /opt/ros/kinetic/setup.bash
         ## end
         ;;
     'zsh')
@@ -28,10 +27,8 @@ case `grep -i name /proc/$$/status | awk '{print $2}'` in
         # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
         HIST_STAMPS="mm-dd-yyyy"
         ## ROS config
-        echo source /opt/ros/kinetic/setup.zsh
-        source /opt/ros/kinetic/setup.zsh
+        m.import /opt/ros/kinetic/setup.zsh
         ## end
         ;;
 esac
-
 # end

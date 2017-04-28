@@ -1,0 +1,3 @@
+DEBUG_ON=true
+DEBUG_OFF=false
+DEBUG=DEBUG_OFF
