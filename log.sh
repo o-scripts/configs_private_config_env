@@ -1,11 +1,16 @@
 # ====================== global functions ======================== #
 source ${LOCAL_CONFIG_DIR}/env/color.sh
+source ${LOCAL_CONFIG_DIR}/env/code.sh
+source ${LOCAL_CONFIG_DIR}/env/settings.sh
+
 ##! @brief : print the fatal log
 ##! @params: $@ => msg
 ##! @return: see return code list
 m.log.f()
 {
-    echo -e "${FATAL_COLOR}$@${COLOR_NC}"
+    if [ "$DEBUG_ON" = "$DEBUG" ]; then
+        echo -e "${FATAL_COLOR}$@${COLOR_NC}"
+    fi
     return ${RET_RUNNING_OK}
 }
 
@@ -14,7 +19,9 @@ m.log.f()
 ##! @return: see return code list
 m.log.w()
 {
-    echo -e "${WARNING_COLOR}$@${COLOR_NC}"
+    if [ "$DEBUG_ON" = "$DEBUG" ]; then
+        echo -e "${WARNING_COLOR}$@${COLOR_NC}"
+    fi
     return ${RET_RUNNING_OK}
 }
 
@@ -23,7 +30,7 @@ m.log.w()
 ##! @return: see return code list
 m.log.d()
 {
-	if [[ DEBUG_ON -eq DEBUG ]]; then
+	if [ "$DEBUG_ON" = "$DEBUG" ]; then
     	echo -e "${NOTICE_COLOR}$@${COLOR_NC}"
 	fi
     return ${RET_RUNNING_OK}
@@ -46,7 +53,7 @@ m.import()
         m.log.d source $file
         source $file
     else
-        m.log.f $file not exist!!!
+        m.log.w $file not exist!!!
     fi
 }
 ## end
