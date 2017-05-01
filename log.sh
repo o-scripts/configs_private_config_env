@@ -41,7 +41,7 @@ m.log.d()
 ##! @return: see return code list
 m.log.v()
 {
-    echo -e "$@"
+    echo -e "${INFO_COLOR}$@${COLOR_NC}"
     return ${RET_RUNNING_OK}
 }
 
