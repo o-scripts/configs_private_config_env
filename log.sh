@@ -6,7 +6,7 @@ source ${LOCAL_CONFIG_DIR}/env/settings.sh
 ##! @brief : print the fatal log
 ##! @params: $@ => msg
 ##! @return: see return code list
-m.log.f()
+m.log.e()
 {
     if [ "$DEBUG_ON" = "$DEBUG" ]; then
         echo -e "${FATAL_COLOR}$@${COLOR_NC}"

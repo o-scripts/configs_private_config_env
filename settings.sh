@@ -1,3 +1,3 @@
-DEBUG_ON=true
-DEBUG_OFF=false
-DEBUG=DEBUG_ON
+export DEBUG_ON=true
+export DEBUG_OFF=false
+export DEBUG=${DEBUG_OFF}
