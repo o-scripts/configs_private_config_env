@@ -1,37 +1,45 @@
 
 # commonly useful colors
 ##! Normal colors
-BLACK='\e[0;30m'        # Black
-RED='\e[0;31m'          # Red
-GREEN='\e[0;32m'        # Green
-YELLOW='\e[0;33m'       # Yellow
-BLUE='\e[0;34m'         # Blue
-PURPLE='\e[0;35m'       # Purple
-CYAN='\e[0;36m'         # Cyan
-WHITE='\e[0;37m'        # White
+case `uname` in
+	'Darwin')
+		PREFIX='\x1B'
+		;;
+	'Linux')
+		PREFIX='\e'
+		;;
+esac
+BLACK=${PREFIX}'[0;30m'        # Black
+RED=${PREFIX}'[0;31m'          # Red
+GREEN=${PREFIX}'[0;32m'        # Green
+YELLOW=${PREFIX}'[0;33m'       # Yellow
+BLUE=${PREFIX}'[0;34m'         # Blue
+PURPLE=${PREFIX}'[0;35m'       # Purple
+CYAN=${PREFIX}'[0;36m'         # Cyan
+WHITE=${PREFIX}'[0;37m'        # White
 
 # Bold colors
-BBLACK='\e[1;30m'       # Black
-BRED='\e[1;31m'         # Red
-BGREEN='\e[1;32m'       # Green
-BYELLOW='\e[1;33m'      # Yellow
-BBLUE='\e[1;34m'        # Blue
-BPURPLE='\e[1;35m'      # Purple
-BCYAN='\e[1;36m'        # Cyan
-BWHITE='\e[1;37m'       # White
+BBLACK=${PREFIX}'[1;30m'       # Black
+BRED=${PREFIX}'[1;31m'         # Red
+BGREEN=${PREFIX}'[1;32m'       # Green
+BYELLOW=${PREFIX}'[1;33m'      # Yellow
+BBLUE=${PREFIX}'[1;34m'        # Blue
+BPURPLE=${PREFIX}'[1;35m'      # Purple
+BCYAN=${PREFIX}'[1;36m'        # Cyan
+BWHITE=${PREFIX}'[1;37m'       # White
 
 # Background colors
-ON_BLACK='\e[40m'       # Black
-ON_RED='\e[41m'         # Red
-ON_GREEN='\e[42m'       # Green
-ON_YELLOW='\e[43m'      # Yellow
-ON_BLUE='\e[44m'        # Blue
-ON_PURPLE='\e[45m'      # Purple
-ON_CYAN='\e[46m'        # Cyan
-ON_WHITE='\e[47m'       # White
+ON_BLACK=${PREFIX}'[40m'       # Black
+ON_RED=${PREFIX}'[41m'         # Red
+ON_GREEN=${PREFIX}'[42m'       # Green
+ON_YELLOW=${PREFIX}'[43m'      # Yellow
+ON_BLUE=${PREFIX}'[44m'        # Blue
+ON_PURPLE=${PREFIX}'[45m'      # Purple
+ON_CYAN=${PREFIX}'[46m'        # Cyan
+ON_WHITE=${PREFIX}'[47m'       # White
 
 # Reset Color
-COLOR_NC='\e[m'
+COLOR_NC=${PREFIX}'[m'
 # Color Configuration
 FATAL_COLOR="${BWHITE}${ON_RED}"
 WARNING_COLOR="${BWHITE}${ON_YELLOW}"
