@@ -1,8 +1,4 @@
 # ====================== global functions ======================== #
-source ${LOCAL_CONFIG_DIR}/env/color.sh
-source ${LOCAL_CONFIG_DIR}/env/code.sh
-source ${LOCAL_CONFIG_DIR}/env/settings.sh
-
 ##! @brief : print the fatal log
 ##! @params: $@ => msg
 ##! @return: see return code list

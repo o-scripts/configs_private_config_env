@@ -21,7 +21,11 @@ export MAC_ROOT=${HOME}/shell/
 #unset JAVA_HOME
 ## end
 
-export PS1='\[\e[36;1m\]\u@\h:\[\e[32;1m\]\w\[\e[36;1m\]\$ \[\e[0m\]'
+# PS1 config
+export PS1=${PS_BCYAN}'[\u@\h: '${PS_BGREEN}'\w '${PS_BYELLOW}'➜ '${PS_BCYAN}'$(__git_ps1 " (${PS_BRED}%s${PS_BCYAN})")'${PS_BCYAN}'] $'${PS_COLOR_NC}' '
+# '\[\e[36;1m\]\u@\h: \[\e[32;1m\]\w\[\e[36;1m\]\$ \[\e[0m\]'
+# '[ \u@\h \W$(__git_ps1 " (%s)")]\$ '
+# end
 
 ## docker for mac osx
 export DOCKER_HOST=tcp://192.168.59.103:2376
