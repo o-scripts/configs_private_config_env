@@ -6,6 +6,8 @@ m.log.e()
 {
     if [ "$DEBUG_ON" = "$DEBUG" ]; then
         echo -e "${FATAL_COLOR}$@${COLOR_NC}"
+    else
+        echo -e "${FATAL_COLOR}$@${COLOR_NC}"
     fi
     return ${RET_RUNNING_OK}
 }

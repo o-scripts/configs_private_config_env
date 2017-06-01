@@ -22,7 +22,7 @@ export MAC_ROOT=${HOME}/shell/
 ## end
 
 # PS1 config
-export PS1=${PS_BCYAN}'[\u@\h: '${PS_BGREEN}'\w '${PS_BYELLOW}'➜ '${PS_BCYAN}'$(__git_ps1 " (${PS_BRED}%s${PS_BCYAN})")'${PS_BCYAN}'] $'${PS_COLOR_NC}' '
+export PS1=${PS_BCYAN}'[\u@\h: '${PS_BGREEN}'\w '${PS_BYELLOW}'➜ '${PS_BCYAN}'$(__git_ps1 " (${PS_BRED}%s${PS_BCYAN})")'${PS_BCYAN}']\n$ '${PS_COLOR_NC}
 # '\[\e[36;1m\]\u@\h: \[\e[32;1m\]\w\[\e[36;1m\]\$ \[\e[0m\]'
 # '[ \u@\h \W$(__git_ps1 " (%s)")]\$ '
 # end
