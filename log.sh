@@ -5,9 +5,9 @@
 m.log.e()
 {
     if [ "$DEBUG_ON" = "$DEBUG" ]; then
-        echo -e "${FATAL_COLOR}$@${COLOR_NC}"
+        echo -e "${FATAL_COLOR}$@${COLOR_NC}"${COLOR_NC} [${BRED}✘︎${COLOR_NC}]
     else
-        echo -e "${FATAL_COLOR}$@${COLOR_NC}"
+        echo -e "${FATAL_COLOR}$@${COLOR_NC}"${COLOR_NC} [${BRED}✘${COLOR_NC}]
     fi
     return ${RET_RUNNING_OK}
 }
@@ -18,7 +18,7 @@ m.log.e()
 m.log.w()
 {
     if [ "$DEBUG_ON" = "$DEBUG" ]; then
-        echo -e "${WARNING_COLOR}$@${COLOR_NC}"
+        echo -e "${WARNING_COLOR}$@${COLOR_NC}"${COLOR_NC} [${BRED}?${COLOR_NC}]
     fi
     return ${RET_RUNNING_OK}
 }
@@ -39,7 +39,7 @@ m.log.d()
 ##! @return: see return code list
 m.log.v()
 {
-    echo -e "${INFO_COLOR}$@${COLOR_NC}"
+    echo -e "${INFO_COLOR}$@${COLOR_NC}"${COLOR_NC} [${BRED}✔︎${COLOR_NC}]
     return ${RET_RUNNING_OK}
 }
 
@@ -48,7 +48,7 @@ m.import()
 {
     file=$1
     if [[ -f $file ]]; then
-        m.log.d source $file
+        m.log.d source $file${COLOR_NC} [${BRED}✔︎${COLOR_NC}]
         source $file
     else
         m.log.w $file not exist!!!
