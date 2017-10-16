@@ -7,7 +7,7 @@ export JRE_HOME=${JAVA_HOME}/jre
 export CLASSPATH=.
 ## // :$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
 #export JAVA_HOME=/usr/lib/jvm/java-6-sun
-export JAVA_HOME=/usr/lib/jvm/java-1.7.0-openjdk-amd64
+export JAVA_HOME=/usr/lib/jvm/default-java
 #export JAVA_HOME=/usr/lib/jvm/openjdk-7-amd64
 ## end
 

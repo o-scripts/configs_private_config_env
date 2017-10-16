@@ -27,12 +27,6 @@ export PS1=${PS_BCYAN}'[\u@\h: '${PS_BGREEN}'\w '${PS_BYELLOW}'➜ '${PS_BCYAN}'
 # '[ \u@\h \W$(__git_ps1 " (%s)")]\$ '
 # end
 
-## docker for mac osx
-export DOCKER_HOST=tcp://192.168.59.103:2376
-export DOCKER_CERT_PATH=/Users/zhanggd/.boot2docker/certs/boot2docker-vm
-export DOCKER_TLS_VERIFY=1
-## end
-
 ## for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 unset HISTSIZE
 unset HISTFILESIZE
