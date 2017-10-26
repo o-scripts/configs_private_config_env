@@ -16,6 +16,8 @@ case `grep -i name /proc/$$/status | awk '{print $2}'` in
     'bash')
         export PS1='\[\e[36;1m\]\u@\h:\[\e[32;1m\]\w\[\e[36;1m\]\$ \[\e[0m\]'
         # echo 'this is /bin/bash'
+        unset HISTSIZE
+        unset HISTFILESIZE
         export HISTSIZE=100000000
         export HISTFILESIZE=200000000
         export HISTTIMEFORMAT='[%F %T] '

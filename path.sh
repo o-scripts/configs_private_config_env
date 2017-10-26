@@ -25,6 +25,12 @@ export PATH=${GOROOT}/bin:$PATH
 ## modify @2016.01.30 for matlab
 export PATH=${MATLAB_HOME}/bin:${PATH}
 ## end
+
+## works/bin
+export PATH=${LOCAL_WORKS_DIR}/bin:${PATH}
+export PATH=${LOCAL_WORKS_DIR}/usr/bin:${PATH}
+export PATH=${LOCAL_WORKS_DIR}/usr/local/bin:${PATH}
+## end
 # end
 
 # homebrew software envalue
@@ -44,6 +50,7 @@ case ${ARCH} in
 		export PATH=${MSOFT}/pycharm-current/bin:${PATH}
 		#export PATH=${MSHELL}/bin/git/bin:${PATH}
 		export PATH=${NDK_HOME}:$PATH
+		export PATH=/snap/bin:${PATH}
 		;;
 esac
 # end
