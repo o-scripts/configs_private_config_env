@@ -21,6 +21,8 @@ m.log.w()
     if [ "$DEBUG_ON" = "$DEBUG" ]; then
         echo -e "${WARNING_COLOR}$@${COLOR_NC}"
         read -p "Press any Key to continue....."
+    else
+        echo -e "${WARNING_COLOR}$@${COLOR_NC}"
     fi
     return ${RET_RUNNING_OK}
 }
