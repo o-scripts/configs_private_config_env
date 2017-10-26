@@ -6,6 +6,7 @@ m.log.e()
 {
     if [ "$DEBUG_ON" = "$DEBUG" ]; then
         echo -e "${FATAL_COLOR}$@${COLOR_NC}"
+        read -p "Press any Key to continue....."
     else
         echo -e "${FATAL_COLOR}$@${COLOR_NC}"
     fi
@@ -19,6 +20,7 @@ m.log.w()
 {
     if [ "$DEBUG_ON" = "$DEBUG" ]; then
         echo -e "${WARNING_COLOR}$@${COLOR_NC}"
+        read -p "Press any Key to continue....."
     fi
     return ${RET_RUNNING_OK}
 }
@@ -30,6 +32,7 @@ m.log.d()
 {
 	if [ "$DEBUG_ON" = "$DEBUG" ]; then
     	echo -e "${NOTICE_COLOR}$@${COLOR_NC}"
+        read -p "Press any Key to continue....."
 	fi
     return ${RET_RUNNING_OK}
 }
@@ -40,6 +43,9 @@ m.log.d()
 m.log.v()
 {
     echo -e "${INFO_COLOR}$@${COLOR_NC}"
+    if [ "$DEBUG_ON" = "$DEBUG" ]; then
+        read -p "Press any Key to continue....."
+    fi
     return ${RET_RUNNING_OK}
 }
 
