@@ -1,3 +1,9 @@
+# ====================== global variables ======================== #
+# global var
+export RIGHT="${COLOR_NC}[${BGREEN} ✔ ${COLOR_NC}]"
+export ERROR="${COLOR_NC}[${BRED} ✗ ${COLOR_NC}]"
+TAG=log
+# end
 # ====================== global functions ======================== #
 ##! @brief : print the fatal log
 ##! @params: $@ => msg
@@ -56,10 +62,10 @@ m.import()
 {
     file=$1
     if [[ -f $file ]]; then
-        m.log.d source $file${COLOR_NC} [${BRED}✔︎${COLOR_NC}]
+        m.log.d ${RIGHT} source $file
         source $file
     else
-        m.log.w $file not exist!!!
+        m.log.e ${ERROR} $file not exist!!!
     fi
 }
 ## end
