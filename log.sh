@@ -62,8 +62,9 @@ m.import()
 {
     file=$1
     if [[ -f $file ]]; then
-        m.log.d ${RIGHT} source $file
+        m.log.d "[log] import: "$@
         source $file
+        m.log.d ${RIGHT} "import: ${file} finished..."
     else
         m.log.e ${ERROR} $file not exist!!!
     fi
