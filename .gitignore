@@ -1,1 +1,4 @@
-/private.sh
+*private*
+*.DS_Store
+*settings.sh
+

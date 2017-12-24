@@ -13,28 +13,6 @@ export CL_CYN="\033[36m";
 export CL_RST="\033[0m";
 # end
 
-
-# git root Ordner
-export BRANCH_GIT=${HOME}/develop/branch.git
-export WORK_BASE=${HOME}/works
-# end
-
-# software root Ordner
-export MSOFT=${MSHELL}/software
-export SELFLIB=${MSHELL}/libs
-# end
-
-# ANDROID Einstellungen
-## android Ordner
-export ANDROID_DIR=${HOME}/android
-## end
-
-## SDK und NDK
-export SDK_HOME=${ANDROID_DIR}/android-sdk
-export NDK_HOME=${SDK_HOME}/ndk-bundle
-## end
-# end
-
 # IP
 sip()
 {
@@ -48,7 +26,7 @@ sip()
 
 # self software
 ## cocos2dx
-export COCOS2DX_HOME=${BRANCH_GIT}/cocos2d-x
+export COCOS2DX_HOME=${LOCAL_GIT_DIR}/cocos2d-x
 ## end
 
 ## eclipse
@@ -56,7 +34,7 @@ export ECLIPSE_HOME=${ANDROID_DIR}/eclipse
 ## end
 
 ## go language
-export GOROOT=${MSOFT}/go
+export GOROOT=${LOCAL_SOFT_DIR}/go
 ## end
 
 ## matlab @2016.01.30
@@ -64,7 +42,7 @@ export MATLAB_HOME=/usr/local/matlab/R2015b
 ## end
 
 ## zephyr config
-export ZEPHYR_BASE=${WORK_BASE}/uni/company/eqplay/platform/zephyr
+export ZEPHYR_BASE=${LOCAL_WORKS_DIR}/uni/company/eqplay/platform/zephyr
 export ZEPHYR_GCC_VARIANT=zephyr
 export ZEPHYR_SDK_INSTALL_DIR=${HOME}/zephyr/sdk
 ## end

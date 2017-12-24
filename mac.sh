@@ -3,12 +3,30 @@ export MAC_ROOT=${HOME}/shell/
 #export PAGER=most
 
 ## brew
-### Installing byobu dependency: coreutils
-# PATH="/Users/zhanggd/develop/branch.git/works/tool-kit/publics/homebrew/opt/coreutils/libexec/gnubin:$PATH"
-# MANPATH="/Users/zhanggd/develop/branch.git/works/tool-kit/publics/homebrew/opt/coreutils/libexec/gnuman:$MANPATH"
-### Installing byobu dependency: gnu-sed
-# PATH="/Users/zhanggd/develop/branch.git/works/tool-kit/publics/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
-# MANPATH="/Users/zhanggd/develop/branch.git/works/tool-kit/publics/homebrew/opt/gnu-sed/libexec/gnuman:$MANPATH"
+## Installing byobu dependency: coreutils
+PATH="${WORK_BASE}/tool-kit/publics/homebrew/opt/coreutils/libexec/gnubin:$PATH"
+MANPATH="${WORK_BASE}/tool-kit/publics/homebrew/opt/coreutils/libexec/gnuman:$MANPATH"
+## Installing byobu dependency: gnu-sed
+PATH="${WORK_BASE}/tool-kit/publics/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
+MANPATH="${WORK_BASE}/tool-kit/publics/homebrew/opt/gnu-sed/libexec/gnuman:$MANPATH"
+## libxml2
+export PATH="${WORK_BASE}/tool-kit/publics/homebrew/opt/libxml2/bin:$PATH"
+## apr
+export PATH="${WORK_BASE}/tool-kit/publics/homebrew/opt/apr/bin:$PATH"
+## ccache
+export PATH="${WORK_BASE}/tool-kit/publics/homebrew/opt/ccache/libexec:$PATH"
+## curl
+export PATH="${WORK_BASE}/tool-kit/publics/homebrew/opt/curl/bin:$PATH"
+## e2fsprogs
+export PATH="${WORK_BASE}/tool-kit/publics/homebrew/opt/e2fsprogs/bin:$PATH"
+export PATH="${WORK_BASE}/tool-kit/publics/homebrew/opt/e2fsprogs/sbin:$PATH"
+## findutils
+export PATH="${WORK_BASE}/tool-kit/publics/homebrew/opt/findutils/libexec/gnubin:$PATH"
+export MANPATH="${WORK_BASE}/tool-kit/publics/homebrew/opt/findutils/libexec/gnuman:$MANPATH"
+## flex
+export PATH="${WORK_BASE}/tool-kit/publics/homebrew/opt/flex/bin:$PATH"
+## docbook
+export XML_CATALOG_FILES="${WORK_BASE}/tool-kit/publics/homebrew/etc/xml/catalog"
 ## end
 
 ## Java Einstellungen
