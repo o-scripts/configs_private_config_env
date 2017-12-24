@@ -10,11 +10,9 @@ TAG=log
 ##! @return: see return code list
 m.log.e()
 {
+    echo -e "E ${FATAL_COLOR}$@${COLOR_NC}"
     if [ "$DEBUG_ON" = "$DEBUG" ]; then
-        echo -e "${FATAL_COLOR}$@${COLOR_NC}"
         read -p "Press any Key to continue....."
-    else
-        echo -e "${FATAL_COLOR}$@${COLOR_NC}"
     fi
     return ${RET_RUNNING_OK}
 }
@@ -24,11 +22,9 @@ m.log.e()
 ##! @return: see return code list
 m.log.w()
 {
+    echo -e "W ${WARNING_COLOR}$@${COLOR_NC}"
     if [ "$DEBUG_ON" = "$DEBUG" ]; then
-        echo -e "${WARNING_COLOR}$@${COLOR_NC}"
         read -p "Press any Key to continue....."
-    else
-        echo -e "${WARNING_COLOR}$@${COLOR_NC}"
     fi
     return ${RET_RUNNING_OK}
 }
@@ -39,7 +35,7 @@ m.log.w()
 m.log.d()
 {
 	if [ "$DEBUG_ON" = "$DEBUG" ]; then
-    	echo -e "${NOTICE_COLOR}$@${COLOR_NC}"
+    	echo -e "${NOTICE_COLOR}D${COLOR_NC} - ${NOTICE_COLOR}$@${COLOR_NC}"
         read -p "Press any Key to continue....."
 	fi
     return ${RET_RUNNING_OK}
@@ -50,7 +46,7 @@ m.log.d()
 ##! @return: see return code list
 m.log.v()
 {
-    echo -e "${INFO_COLOR}$@${COLOR_NC}"
+    echo -e "${INFO_COLOR}V${COLOR_NC} - ${INFO_COLOR}$@${COLOR_NC}"
     if [ "$DEBUG_ON" = "$DEBUG" ]; then
         read -p "Press any Key to continue....."
     fi
@@ -62,11 +58,15 @@ m.import()
 {
     file=$1
     if [[ -f $file ]]; then
-        m.log.d "[log] import: "$@
+        m.log.d "m.import - ${BGREEN}$@${COLOR_NC}"
         source $file
-        m.log.d ${RIGHT} "import: ${file} finished..."
+        case $? in
+            0)
+                m.log.d ${RIGHT} "m.import: ${BGREEN}${file}${COLOR_NC} finished..."
+                ;;
+        esac
     else
-        m.log.e ${ERROR} $file not exist!!!
+        m.log.e ${ERROR} ${BRED}$file${COLOR_NC} not exist!!!
     fi
 }
 ## end
