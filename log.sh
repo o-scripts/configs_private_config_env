@@ -10,7 +10,7 @@ TAG=log
 ##! @return: see return code list
 m.log.e()
 {
-    echo -e "E ${FATAL_COLOR}$@${COLOR_NC}"
+    echo -e "${FATAL_COLOR}E${COLOR_NC} - ${FATAL_COLOR}$@${COLOR_NC}"
     if [ "$DEBUG_ON" = "$DEBUG" ]; then
         read -p "Press any Key to continue....."
     fi
@@ -22,7 +22,7 @@ m.log.e()
 ##! @return: see return code list
 m.log.w()
 {
-    echo -e "W ${WARNING_COLOR}$@${COLOR_NC}"
+    echo -e "${WARNING_COLOR}W${COLOR_NC} - ${WARNING_COLOR}$@${COLOR_NC}"
     if [ "$DEBUG_ON" = "$DEBUG" ]; then
         read -p "Press any Key to continue....."
     fi

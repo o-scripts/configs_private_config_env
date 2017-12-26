@@ -45,6 +45,8 @@ case ${ARCH} in
 		export PATH=${NDK_HOME}:$PATH
         ## for works/bin self define bin
         export PATH=${LOCAL_WORKS_DIR}/bin:${PATH}
+        ## laraval
+        export PATH=$HOME/.composer/vendor/bin:${PATH}
 		;;
 	'Linux')
 		export PATH=${MSOFT}/pycharm-current/bin:${PATH}
