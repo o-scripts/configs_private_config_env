@@ -30,13 +30,11 @@ export XML_CATALOG_FILES="${WORK_BASE}/tool-kit/publics/homebrew/etc/xml/catalog
 ## end
 
 ## Java Einstellungen
-#export JRE_HOME=${JAVA_HOME}/jre
-#export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
-#export JAVA_HOME=/usr/lib/jvm/java-6-sun
-#export JAVA_HOME=/usr/lib/jvm/java-1.7.0-openjdk-amd64
-#export JAVA_HOME=/usr/lib/jvm/openjdk-7-amd64
-#export JAVA_HOME=/usr/lib/jvm/openjdk-7-amd64
-#unset JAVA_HOME
+unset JAVA_HOME
+export JAVA_HOME=/Library/Java/Home
+# export JRE_HOME=${JAVA_HOME}/jre
+# export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
+export PATH=${JAVA_HOME}/bin:${PATH}
 ## end
 
 # PS1 config
