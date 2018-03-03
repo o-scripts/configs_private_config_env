@@ -14,7 +14,7 @@ export JAVA_HOME=/usr/lib/jvm/default-java
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 case `grep -i name /proc/$$/status | awk '{print $2}'` in
     'bash')
-        export PS1='\[\e[36;1m\]\u@\h:\[\e[32;1m\]\w\[\e[36;1m\]\$ \[\e[0m\]'
+        export PS1="${PS_BCYAN}[\u@\h:${PS_BGREEN}\w${PS_BCYAN}(${PS_BRED}$(m.git)${PS_BCYAN})]\$ ${PS_COLOR_NC}"
         # echo 'this is /bin/bash'
         unset HISTSIZE
         unset HISTFILESIZE
