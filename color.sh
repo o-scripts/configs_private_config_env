@@ -59,37 +59,42 @@ RET_PARAMS_ERROR=2
 case `uname` in
 	'Darwin')
 		PS_PREFIX='\e'
+		PS_END=''
+		;;
+	'Linux')
+		PS_PREFIX='\[\e'
+		PS_END='\]'
 		;;
 esac
 ##! Normal color
-PS_BLACK=${PS_PREFIX}'[30;0m'        # Black
-PS_RED=${PS_PREFIX}'[31;0m'          # Red
-PS_GREEN=${PS_PREFIX}'[32;0m'        # Green
-PS_YELLOW=${PS_PREFIX}'[33;0m'       # Yellow
-PS_BLUE=${PS_PREFIX}'[34;0m'         # Blue
-PS_PURPLE=${PS_PREFIX}'[35;0m'       # Purple
-PS_CYAN=${PS_PREFIX}'[36;0m'         # Cyan
-PS_WHITE=${PS_PREFIX}'[37;0m'        # White
+PS_BLACK=${PS_PREFIX}'[30;0m'${PS_END}        # Black
+PS_RED=${PS_PREFIX}'[31;0m'${PS_END}          # Red
+PS_GREEN=${PS_PREFIX}'[32;0m'${PS_END}        # Green
+PS_YELLOW=${PS_PREFIX}'[33;0m'${PS_END}       # Yellow
+PS_BLUE=${PS_PREFIX}'[34;0m'${PS_END}         # Blue
+PS_PURPLE=${PS_PREFIX}'[35;0m'${PS_END}       # Purple
+PS_CYAN=${PS_PREFIX}'[36;0m'${PS_END}         # Cyan
+PS_WHITE=${PS_PREFIX}'[37;0m'${PS_END}        # White
 
 ## Bold colors
-PS_BBLACK=${PS_PREFIX}'[30;1m'       # Black
-PS_BRED=${PS_PREFIX}'[31;1m'         # Red
-PS_BGREEN=${PS_PREFIX}'[32;1m'       # Green
-PS_BYELLOW=${PS_PREFIX}'[33;1m'      # Yellow
-PS_BBLUE=${PS_PREFIX}'[34;1m'        # Blue
-PS_BPURPLE=${PS_PREFIX}'[35;1m'      # Purple
-PS_BCYAN=${PS_PREFIX}'[36;1m'        # Cyan
-PS_BWHITE=${PS_PREFIX}'[37;1m'       # White
+PS_BBLACK=${PS_PREFIX}'[30;1m'${PS_END}       # Black
+PS_BRED=${PS_PREFIX}'[31;1m'${PS_END}         # Red
+PS_BGREEN=${PS_PREFIX}'[32;1m'${PS_END}       # Green
+PS_BYELLOW=${PS_PREFIX}'[33;1m'${PS_END}      # Yellow
+PS_BBLUE=${PS_PREFIX}'[34;1m'${PS_END}        # Blue
+PS_BPURPLE=${PS_PREFIX}'[35;1m'${PS_END}      # Purple
+PS_BCYAN=${PS_PREFIX}'[36;1m'${PS_END}        # Cyan
+PS_BWHITE=${PS_PREFIX}'[37;1m'${PS_END}       # White
 
 ## Background colors
-PS_ON_BLACK=${PS_PREFIX}'[40m'       # Black
-PS_ON_RED=${PS_PREFIX}'[41m'         # Red
-PS_ON_GREEN=${PS_PREFIX}'[42m'       # Green
-PS_ON_YELLOW=${PS_PREFIX}'[43m'      # Yellow
-PS_ON_BLUE=${PS_PREFIX}'[44m'        # Blue
-PS_ON_PURPLE=${PS_PREFIX}'[45m'      # Purple
-PS_ON_CYAN=${PS_PREFIX}'[46m'        # Cyan
-PS_ON_WHITE=${PS_PREFIX}'[47m'       # White
+PS_ON_BLACK=${PS_PREFIX}'[40m'${PS_END}       # Black
+PS_ON_RED=${PS_PREFIX}'[41m'${PS_END}         # Red
+PS_ON_GREEN=${PS_PREFIX}'[42m'${PS_END}       # Green
+PS_ON_YELLOW=${PS_PREFIX}'[43m'${PS_END}      # Yellow
+PS_ON_BLUE=${PS_PREFIX}'[44m'${PS_END}        # Blue
+PS_ON_PURPLE=${PS_PREFIX}'[45m'${PS_END}      # Purple
+PS_ON_CYAN=${PS_PREFIX}'[46m'${PS_END}        # Cyan
+PS_ON_WHITE=${PS_PREFIX}'[47m'${PS_END}       # White
 
 ## Reset Color
-PS_COLOR_NC=${PS_PREFIX}'[0m'
+PS_COLOR_NC=${PS_PREFIX}'[0m'${PS_END}		  # reset
