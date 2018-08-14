@@ -25,7 +25,7 @@ case `grep -i name /proc/$$/status | awk '{print $2}'` in
         ## ignore 'space + command'
         export HISTCONTROL=ignorespace
         ## ROS config
-        m.import /opt/ros/kinetic/setup.bash
+        #m.import /opt/ros/kinetic/setup.bash
         ## end
         ;;
     'zsh')
@@ -40,3 +40,6 @@ case `grep -i name /proc/$$/status | awk '{print $2}'` in
         ;;
 esac
 # end
+## opencv config
+LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/lib
+## end

@@ -1,7 +1,7 @@
 #!/bin/bash
 # development einstellungen
 ## value the varables
-export PATH=${SDK_HOME}/tools:${SDK_HOME}/platform-tools:${SDK_HOME}/build-tools/current:$PATH
+export PATH=${SDK_HOME}/tools:${SDK_HOME}/tools/bin:${SDK_HOME}/platform-tools:${SDK_HOME}/build-tools/current:$PATH
 ## eclipse envalue
 export PATH=${ECLIPSE_HOME}:/sbin:/usr/sbin:$PATH
 export PATH=/opt/qt5/bin:$PATH

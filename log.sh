@@ -47,9 +47,9 @@ m.log.d()
 m.log.v()
 {
     echo -e "${INFO_COLOR}V${COLOR_NC} - ${INFO_COLOR}$@${COLOR_NC}"
-    if [ "$DEBUG_ON" = "$DEBUG" ]; then
-        read -p "Press any Key to continue....."
-    fi
+    # if [ "$DEBUG_ON" = "$DEBUG" ]; then
+    #     read -p "Press any Key to continue....."
+    # fi
     return ${RET_RUNNING_OK}
 }
 
