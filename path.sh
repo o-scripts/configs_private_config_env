@@ -1,7 +1,7 @@
 #!/bin/bash
 # development einstellungen
 ## value the varables
-export PATH=${SDK_HOME}/tools:${SDK_HOME}/tools/bin:${SDK_HOME}/platform-tools:${SDK_HOME}/build-tools/current:$PATH
+export PATH=${SDK_HOME}/emulator:${SDK_HOME}/tools:${SDK_HOME}/tools/bin:${SDK_HOME}/platform-tools:${SDK_HOME}/build-tools/current:$PATH
 ## eclipse envalue
 export PATH=${ECLIPSE_HOME}:/sbin:/usr/sbin:$PATH
 export PATH=/opt/qt5/bin:$PATH
@@ -53,6 +53,7 @@ case ${ARCH} in
 		#export PATH=${MSHELL}/bin/git/bin:${PATH}
 		export PATH=${NDK_HOME}:$PATH
 		export PATH=/snap/bin:${PATH}
+		# export PATH=${HOME}/anaconda3/bin:$PATH
 		;;
 esac
 # end
