@@ -1,7 +1,7 @@
 # ====================== global variables ======================== #
 # global var
-export RIGHT="${COLOR_NC}[${BGREEN} ✔ ${COLOR_NC}]"
-export ERROR="${COLOR_NC}[${BRED} ✗ ${COLOR_NC}]"
+export RIGHT="[✔] "
+export ERROR="[✗] "
 TAG=log
 # end
 # ====================== global functions ======================== #
@@ -10,7 +10,7 @@ TAG=log
 ##! @return: see return code list
 m.log.e()
 {
-    echo -e "${FATAL_COLOR}E${COLOR_NC} - ${FATAL_COLOR}$@${COLOR_NC}"
+    echo -e "E - $@"
     if [ "$DEBUG_ON" = "$DEBUG" ]; then
         read -p "Press any Key to continue....."
     fi
@@ -22,7 +22,7 @@ m.log.e()
 ##! @return: see return code list
 m.log.w()
 {
-    echo -e "${WARNING_COLOR}W${COLOR_NC} - ${WARNING_COLOR}$@${COLOR_NC}"
+    echo -e "W - $@"
     if [ "$DEBUG_ON" = "$DEBUG" ]; then
         read -p "Press any Key to continue....."
     fi
@@ -34,10 +34,10 @@ m.log.w()
 ##! @return: see return code list
 m.log.d()
 {
-	if [ "$DEBUG_ON" = "$DEBUG" ]; then
-    	echo -e "${NOTICE_COLOR}D${COLOR_NC} - ${NOTICE_COLOR}$@${COLOR_NC}"
+    if [ "$DEBUG_ON" = "$DEBUG" ]; then
+        echo -e "D - $@"
         read -p "Press any Key to continue....."
-	fi
+    fi
     return ${RET_RUNNING_OK}
 }
 
@@ -46,7 +46,7 @@ m.log.d()
 ##! @return: see return code list
 m.log.v()
 {
-    echo -e "${INFO_COLOR}V${COLOR_NC} - ${INFO_COLOR}$@${COLOR_NC}"
+    echo -e "V - $@"
     # if [ "$DEBUG_ON" = "$DEBUG" ]; then
     #     read -p "Press any Key to continue....."
     # fi
