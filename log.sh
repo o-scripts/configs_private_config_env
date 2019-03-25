@@ -62,11 +62,11 @@ m.import()
         source $file
         case $? in
             0)
-                m.log.d ${RIGHT} "m.import: ${BGREEN}${file}${COLOR_NC} finished..."
+                m.log.d ${RIGHT} "m.import: ${file} finished..."
                 ;;
         esac
     else
-        m.log.e ${ERROR} ${BRED}$file${COLOR_NC} not exist!!!
+        m.log.e ${ERROR} $file not exist!!!
     fi
 }
 ## end
