@@ -2,15 +2,6 @@
 ## setting for pycharm cannot use ibus
 export IBUS_ENABLE_SYNC_MODE=1
 
-## Java Einstellungen
-export JRE_HOME=${JAVA_HOME}/jre
-export CLASSPATH=.
-## // :$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
-#export JAVA_HOME=/usr/lib/jvm/java-6-sun
-export JAVA_HOME=/usr/lib/jvm/default-java
-#export JAVA_HOME=/usr/lib/jvm/openjdk-7-amd64
-## end
-
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 case `grep -i name /proc/$$/status | awk '{print $2}'` in
     'bash')
@@ -40,6 +31,12 @@ case `grep -i name /proc/$$/status | awk '{print $2}'` in
         ;;
 esac
 # end
+
+# rust
+m.import ${HOME}/.cargo/env
+export PATH=$HOME/.cargo/bin:${PATH}
+# end
+
 ## opencv config
 LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/lib
 ## end

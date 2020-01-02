@@ -19,7 +19,10 @@ export PATH=${MSHELL}/tool-kit/bin:$PATH
 ## end
 
 ## modify @2014.09.04 for go language
-export PATH=${GOROOT}/bin:$PATH
+#export PATH=${GO_HOME}/bin:$PATH
+#export PATH=${GO_HOME}/bin:${PATH}
+# add local bin
+export PATH=${HOME}/go/bin:${PATH}
 ## end
 
 ## modify @2016.01.30 for matlab

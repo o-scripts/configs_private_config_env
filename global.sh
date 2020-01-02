@@ -33,17 +33,13 @@ export COCOS2DX_HOME=${LOCAL_GIT_DIR}/cocos2d-x
 export ECLIPSE_HOME=${ANDROID_DIR}/eclipse
 ## end
 
-## go language
-export GOROOT=${LOCAL_SOFT_DIR}/go
-## end
-
 ## matlab @2016.01.30
-export MATLAB_HOME=/usr/local/matlab/R2015b
+export MATLAB_HOME=${HOME}/works/tool-kit/publics/matlab_cur
 ## end
 
 ## zephyr config
-export ZEPHYR_BASE=${LOCAL_WORKS_DIR}/uni/company/eqplay/platform/zephyr
-export ZEPHYR_GCC_VARIANT=zephyr
-export ZEPHYR_SDK_INSTALL_DIR=${HOME}/zephyr/sdk
+#export ZEPHYR_BASE=${LOCAL_WORKS_DIR}/works/mnt/pro/my-git/zephyr-sdk-ng
+export ZEPHYR_TOOLCHAIN_VARIANT=zephyr
+export ZEPHYR_SDK_INSTALL_DIR=${LOCAL_WORKS_DIR}/works/mnt/pro/my-git/zephyr-sdk-ng
 ## end
 # end
