@@ -10,13 +10,19 @@ case `grep -i name /proc/$$/status | awk '{print $2}'` in
         # echo 'this is /bin/bash'
         unset HISTSIZE
         unset HISTFILESIZE
-        export HISTSIZE=100000000
-        export HISTFILESIZE=200000000
-        export HISTTIMEFORMAT='[%F %T] '
+        #export HISTSIZE=100000000
+        #export HISTFILESIZE=200000000
+        #export HISTTIMEFORMAT='[%F %T] '
         ## ignore 'space + command'
-        export HISTCONTROL=ignorespace
+        #export HISTCONTROL=ignorespace
+
+        HISTSIZE=100000000
+        HISTFILESIZE=200000000
+        HISTTIMEFORMAT='[%F %T] '
+        ## ignore 'space + command'
+        HISTCONTROL=ignorespace
         ## ROS config
-        #m.import /opt/ros/kinetic/setup.bash
+        m.import /opt/ros/melodic/setup.bash
         ## end
         ;;
     'zsh')
@@ -38,5 +44,23 @@ export PATH=$HOME/.cargo/bin:${PATH}
 # end
 
 ## opencv config
-LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/lib
+#LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/lib
+## end
+
+# android sdk目录，替换为你自己的即可
+export ANDROID_HOME="${HOME}/Android/Sdk"
+export PATH=${PATH}:${ANDROID_HOME}/tools
+export PATH=${PATH}:${ANDROID_HOME}/tools/bin
+export PATH=${PATH}:${ANDROID_HOME}/platform-tools
+
+## flutter
+#export PATH=${LOCAL_WORKS_DIR}/tool-kit/publics/ui/flutter/bin:$PATH
+#china
+#export PUB_HOSTED_URL=https://pub.flutter-io.cn
+#export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
+## end
+
+## go
+#export GO_HOME=/usr/local/go
+export GO_HOME=/snap/go/current
 ## end
