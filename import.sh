@@ -14,7 +14,7 @@ case ${ARCH} in
     Darwin)
         m.import ${LOCAL_CONFIG_DIR}/env/bash/git-prompt.sh
         # m.import ${LOCAL_CONFIG_DIR}/env/bash/git-completion.bash
-        m.import ${LOCAL_CONFIG_DIR}/env/bash/bash_completion
+        #m.import ${LOCAL_CONFIG_DIR}/env/bash/bash_completion
         ;;
     'Linux')
         ;;
