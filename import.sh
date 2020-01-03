@@ -9,18 +9,6 @@ g.import ${LOCAL_CONFIG_DIR}/env/code.sh
 g.import ${LOCAL_CONFIG_DIR}/env/log.sh
 # end
 
-# import git bash config
-case ${ARCH} in
-    Darwin)
-        m.import ${LOCAL_CONFIG_DIR}/env/bash/git-prompt.sh
-        # m.import ${LOCAL_CONFIG_DIR}/env/bash/git-completion.bash
-        #m.import ${LOCAL_CONFIG_DIR}/env/bash/bash_completion
-        ;;
-    'Linux')
-        ;;
-esac
-# end
-
 # unterscheidliche Einstellungen
 m.import ${LOCAL_CONFIG_DIR}/env/global.sh
 m.import ${LOCAL_CONFIG_DIR}/env/private.sh
