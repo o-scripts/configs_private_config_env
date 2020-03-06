@@ -25,4 +25,5 @@ m.import ${LOCAL_CONFIG_DIR}/env/flutter.sh
 m.import ${LOCAL_CONFIG_DIR}/env/anaconda.sh
 m.import ${LOCAL_CONFIG_DIR}/env/path.sh
 m.import ${LOCAL_CONFIG_DIR}/env/docker.sh
+m.import ${LOCAL_CONFIG_DIR}/env/zephyr.sh
 # end

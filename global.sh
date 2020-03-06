@@ -37,9 +37,3 @@ export ECLIPSE_HOME=${ANDROID_DIR}/eclipse
 export MATLAB_HOME=${HOME}/works/tool-kit/publics/matlab_cur
 ## end
 
-## zephyr config
-#export ZEPHYR_BASE=${LOCAL_WORKS_DIR}/works/mnt/pro/my-git/zephyr-sdk-ng
-export ZEPHYR_TOOLCHAIN_VARIANT=zephyr
-export ZEPHYR_SDK_INSTALL_DIR=${LOCAL_WORKS_DIR}/works/mnt/pro/my-git/zephyr-sdk-ng
-## end
-# end
