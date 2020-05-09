@@ -12,6 +12,8 @@ g.import ${LOCAL_CONFIG_DIR}/env/log.sh
 # unterscheidliche Einstellungen
 m.import ${LOCAL_CONFIG_DIR}/env/global.sh
 m.import ${LOCAL_CONFIG_DIR}/env/private.sh
+
+# setting different with os
 case ${ARCH} in
     'Linux'|'linux'|'LINUX')
         m.import ${LOCAL_CONFIG_DIR}/env/linux.sh
@@ -20,10 +22,10 @@ case ${ARCH} in
         m.import ${LOCAL_CONFIG_DIR}/env/mac.sh
         ;;
 esac
-m.import ${LOCAL_CONFIG_DIR}/env/android.sh
-m.import ${LOCAL_CONFIG_DIR}/env/flutter.sh
-m.import ${LOCAL_CONFIG_DIR}/env/anaconda.sh
-m.import ${LOCAL_CONFIG_DIR}/env/path.sh
-m.import ${LOCAL_CONFIG_DIR}/env/docker.sh
-m.import ${LOCAL_CONFIG_DIR}/env/zephyr.sh
+
+# submodules
+for i in $(ls ${LOCAL_CONFIG_DIR}/env/modules);
+do
+    m.import ${LOCAL_CONFIG_DIR}/env/modules/${i}
+done
 # end

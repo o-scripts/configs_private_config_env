@@ -22,7 +22,7 @@ case `grep -i name /proc/$$/status | awk '{print $2}'` in
         ## ignore 'space + command'
         HISTCONTROL=ignorespace
         ## ROS config
-        m.import /opt/ros/melodic/setup.bash
+        #m.import /opt/ros/melodic/setup.bash
         ## end
         ;;
     'zsh')
@@ -31,30 +31,14 @@ case `grep -i name /proc/$$/status | awk '{print $2}'` in
         # stamp shown in the history command output.
         # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
         HIST_STAMPS="mm-dd-yyyy"
-        ## ROS config
-        m.import /opt/ros/melodic/setup.zsh
-        ## end
         ;;
 esac
-# end
-
-# rust
-m.import ${HOME}/.cargo/env
-export PATH=$HOME/.cargo/bin:${PATH}
 # end
 
 ## opencv config
 #LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/local/lib
 ## end
 
-# android sdk目录，替换为你自己的即可
-export ANDROID_HOME="${HOME}/Android/Sdk"
-export PATH=${PATH}:${ANDROID_HOME}/tools
-export PATH=${PATH}:${ANDROID_HOME}/tools/bin
-export PATH=${PATH}:${ANDROID_HOME}/platform-tools
-
-## flutter
-#export PATH=${LOCAL_WORKS_DIR}/tool-kit/publics/ui/flutter/bin:$PATH
 #china
 #export PUB_HOSTED_URL=https://pub.flutter-io.cn
 #export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
