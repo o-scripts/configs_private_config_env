@@ -1,5 +1,4 @@
 # rust
-m.import ${HOME}/.cargo/env
-export PATH=$HOME/.cargo/bin:${PATH}
+export PATH=${PATH}:$HOME/.cargo/bin
 # end
 

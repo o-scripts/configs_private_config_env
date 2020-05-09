@@ -44,7 +44,3 @@ esac
 #export FLUTTER_STORAGE_BASE_URL=https://storage.flutter-io.cn
 ## end
 
-## go
-#export GO_HOME=/usr/local/go
-export GO_HOME=/snap/go/current
-## end

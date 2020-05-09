@@ -14,12 +14,3 @@ sip()
 }
 # end
 
-# self software
-## cocos2dx
-export COCOS2DX_HOME=${LOCAL_GIT_DIR}/cocos2d-x
-## end
-
-## matlab @2016.01.30
-export MATLAB_HOME=${HOME}/works/tool-kit/publics/matlab_cur
-## end
-

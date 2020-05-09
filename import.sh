@@ -29,3 +29,6 @@ do
     m.import ${LOCAL_CONFIG_DIR}/env/modules/${i}
 done
 # end
+
+m.import ${LOCAL_CONFIG_DIR}/env/path.sh
+
